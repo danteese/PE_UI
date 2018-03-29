@@ -1,0 +1,44 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    link(href='vendor/css/materialize.css', rel='stylesheet')
+    link(href='stylesheets/style.css', rel='stylesheet')
+    script(src='vendor/js/jquery.js')
+    script(src='vendor/js/materialize.js')
+    title= title
+  body
+    .container
+      h1 Catálogo de estilos
+      p 
+        | El presente documento describe los componentes que formarán parte de la aplicación PetMatcher!
+    
+    mixin card(img, name, race)
+      .card.pmcard.z-depth-0
+        .pmcard-icon
+          i.material-icons favorite
+        .pmcard-content
+          h5= name
+          span= race
+        .card-image
+          img(src='images/'+img)
+                
+    section
+      .container
+        h5 Cards por pets
+        .row
+          .col.s12.m6.l3
+            +card('thumb.jpg', 'Pato', 'Raza')
+          .col.s12.m6.l3
+            +card('thumb2.jpg', 'Firulais', 'Raza')
+          .col.s12.m6.l3
+            +card('thumb3.jpg', 'Flaco', 'Raza')
+          .col.s12.m6.l3
+            +card('thumb.jpg', 'Newton', 'Raza')
+            
+            
+              
+
+  
